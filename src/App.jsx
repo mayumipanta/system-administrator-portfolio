@@ -59,26 +59,11 @@ const pathLevels = [
 ];
 
 const skillItems = [
-  {
-    title: 'Operating System Administration',
-    text: 'The foundation of the role — nearly every sysadmin task depends on Windows or Linux knowledge.',
-  },
-  {
-    title: 'Networking',
-    text: 'You cannot troubleshoot "no internet" without understanding how devices communicate.',
-  },
-  {
-    title: 'Troubleshooting',
-    text: 'A logical, methodical approach to finding root causes instead of guessing.',
-  },
-  {
-    title: 'Security Fundamentals',
-    text: 'Even junior staff protect company data through updates, firewalls, and access control.',
-  },
-  {
-    title: 'Scripting',
-    text: 'Automating repetitive tasks is what separates a sysadmin from basic IT support.',
-  },
+  'Computer Troubleshooting',
+  'Basic Networking',
+  'File Management',
+  'Software Installation',
+  'Basic Hardware Knowledge',
 ];
 
 const jobRoleItems = [
@@ -100,18 +85,12 @@ const jobRoleItems = [
 ];
 
 const toolItems = [
-  {
-    name: 'VirtualBox / VMware',
-    purpose: 'Practice server setups safely on your own laptop — free and beginner-friendly.',
-  },
-  {
-    name: 'Windows Server / Ubuntu Server',
-    purpose: 'The actual environments used in the workplace; familiarity is expected.',
-  },
-  {
-    name: 'osTicket / Freshdesk',
-    purpose: 'Learn the real workflow of IT support ticketing before your first job.',
-  },
+  'Google Chrome',
+  'Microsoft Word',
+  'Visual Studio Code',
+  'Command Prompt (CMD)',
+  'File Explorer',
+  'Google Drive',
 ];
 
 function App() {
@@ -275,17 +254,16 @@ function App() {
           <section id="skills" className="py-5">
             <div className="container">
               <div className="section-heading mb-4">
-                <p className="section-kicker mb-2">Skills and Qualifications</p>
-                <h2 className="fw-bold text-primary-dark">Skills and Qualifications</h2>
+                <p className="section-kicker mb-2">Skills</p>
+                <h2 className="fw-bold text-primary-dark">Skills</h2>
               </div>
 
               <div className="row g-4">
-                {skillItems.map(({ title, text }, index) => (
-                  <div className="col-md-6 col-xl-4" key={title}>
+                {skillItems.map((skill, index) => (
+                  <div className="col-md-6 col-xl-4" key={skill}>
                     <div className="card h-100 border-0 shadow-sm rounded-4 p-4 skill-card">
                       <div className="skill-number mb-3">{String(index + 1).padStart(2, '0')}</div>
-                      <h3 className="h5 fw-bold text-primary-dark">{title}</h3>
-                      <p className="mb-0 text-muted">{text}</p>
+                      <h3 className="h5 fw-bold text-primary-dark mb-0">{skill}</h3>
                     </div>
                   </div>
                 ))}
@@ -316,39 +294,18 @@ function App() {
           <section id="tools" className="py-5">
             <div className="container">
               <div className="section-heading mb-4">
-                <p className="section-kicker mb-2">Required Skills and Tools</p>
-                <h2 className="fw-bold text-primary-dark">Required Skills and Tools</h2>
+                <p className="section-kicker mb-2">Tools and Technologies</p>
+                <h2 className="fw-bold text-primary-dark">Tools and Technologies</h2>
               </div>
 
               <div className="row g-4">
-                <div className="col-lg-6">
-                  <div className="card h-100 border-0 shadow-sm rounded-4 p-4">
-                    <h3 className="h5 fw-bold text-primary-dark mb-3">Skills:</h3>
-                    <ul className="mb-0 ps-3">
-                      <li>OS Administration</li>
-                      <li>Networking</li>
-                      <li>Troubleshooting</li>
-                      <li>Security Fundamentals</li>
-                      <li>Scripting and Automation</li>
-                    </ul>
-                  </div>
-                </div>
-
-                <div className="col-lg-6">
-                  <div className="card h-100 border-0 shadow-sm rounded-4 p-4">
-                    <h3 className="h5 fw-bold text-primary-dark mb-3">Tools:</h3>
-                    <div className="row g-3">
-                      {toolItems.map(({ name, purpose }) => (
-                        <div className="col-12" key={name}>
-                          <div className="tool-card border rounded-4 p-3 h-100">
-                            <h4 className="h6 fw-bold text-primary-dark mb-2">{name}</h4>
-                            <p className="mb-0 text-muted">{purpose}</p>
-                          </div>
-                        </div>
-                      ))}
+                {toolItems.map((tool) => (
+                  <div className="col-md-6 col-xl-4" key={tool}>
+                    <div className="tool-card border rounded-4 p-3 h-100">
+                      <h3 className="h6 fw-bold text-primary-dark mb-0">{tool}</h3>
                     </div>
                   </div>
-                </div>
+                ))}
               </div>
             </div>
           </section>
@@ -370,13 +327,13 @@ function App() {
                   <p className="section-kicker text-sky mb-2">About the Developer</p>
                   <h2 className="fw-bold mb-3">Mayumi N. Panta</h2>
                   <p className="text-white-75 mb-3">
-                    I am Mayumi N. Panta, a BSIT student at Occidental Mindoro State University — Mamburao Campus, interested in server management and IT infrastructure. I study Linux, networking, and basic scripting outside of class, and practice using virtual machines to get familiar with real server environments.
+                    My name is Mayumi N. Panta. I am a Bachelor of Science in Information Technology (BSIT) student. I am interested in computers and technology. As a student, I am still learning and improving my basic IT skills.
                   </p>
                   <p className="text-white-75 mb-3">
-                    <strong>Preferred IT Career Path:</strong> Help Desk / IT Support Technician as an entry point, progressing toward System Administrator and eventually Systems Engineer.
+                    <strong>Preferred IT Career Path:</strong> I am interested in learning about IT Support and System Administration. I want to gain more knowledge about computers, networking, and troubleshooting while studying.
                   </p>
                   <p className="text-white-75 mb-0">
-                    <strong>Professional Goals:</strong> Earn CompTIA A+ and CompTIA Network+ certifications before graduating in June 2027, land an entry-level IT support role, then specialize in server administration and cloud infrastructure.
+                    <strong>Professional Goals:</strong> My goal is to finish my studies and improve my knowledge and skills. I want to explore different career opportunities after graduation and find a job that matches my interests and abilities. I will continue learning new things that can help me in my future career.
                   </p>
 
                   <div className="about-contact-card mt-4">
