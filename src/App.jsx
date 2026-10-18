@@ -341,7 +341,7 @@ function App() {
                     <ul className="about-contact-list mb-0">
                       <li><span>Email</span><a href="mailto:mayumipanta04@gmail.com">mayumipanta04@gmail.com</a></li>
                       <li><span>Mobile</span><a href="tel:+639106436782">09106436782</a></li>
-                      <li><span>Location</span><p>Mamburao, Occidental Mindoro, Philippines</p></li>
+                      <li><span>Location</span><p>Macatol</p></li>
                     </ul>
                   </div>
                 </div>
